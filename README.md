@@ -1,37 +1,9 @@
-# Farm + Vue
+# My Social Network
 
-This template should help you start developing using Vue and TypeScript in Farm.
+This is my personal project where I try to create a social network similar to Twitter. This is just for educational and code practice purposes.
 
-## Setup
+## Web page
 
-Install the dependencies:
+URL: https://social-network-jaramillo.netlify.app/
 
-```bash
-pnpm install
-```
-
-## Get Started
-
-Start the dev server:
-
-```bash
-pnpm start
-```
-
-Build the app for production:
-
-```bash
-pnpm build
-```
-
-Preview the Production build product:
-
-```bash
-pnpm preview
-```
-
-Clear persistent cache local files
-
-```bash
-pnpm clean
-```
+Developed by Antonio Jaramillo
