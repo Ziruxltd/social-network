@@ -1,43 +1,11 @@
 <template>
-  <nav>
-    <ul>
-      <li :class="{ active: activeRoute === '/' }">
-        <RouterLink to="/" @click="activeRoute = '/'">
-          <span class="material-symbols-outlined">home</span> Home
-        </RouterLink>
+  <ul>
+    <RouterLink class="nav-link" v-for="route in routes" :key="route.path" :to="route.path" @click="activeRoute = route.path">
+      <li :class="{ active: activeRoute === route.path }">
+        <span class="material-symbols-outlined">{{ route.icon }}</span> {{ route.name }}
       </li>
-      <li :class="{ active: activeRoute === '/search' }">
-        <RouterLink to="/search" @click="activeRoute = '/search'">
-          <span class="material-symbols-outlined">search</span> Search
-        </RouterLink>
-      </li>
-      <li :class="{ active: activeRoute === '/notifications' }">
-        <RouterLink to="/notifications" @click="activeRoute = '/notifications'">
-          <span class="material-symbols-outlined">notifications</span> Notifications
-        </RouterLink>
-      </li>
-      <li :class="{ active: activeRoute === '/chat' }">
-        <RouterLink to="/chat" @click="activeRoute = '/chat'">
-          <span class="material-symbols-outlined">chat</span> Chat
-        </RouterLink>
-      </li>
-      <li :class="{ active: activeRoute === '/feeds' }">
-        <RouterLink to="/feeds" @click="activeRoute = '/feeds'">
-          <span class="material-symbols-outlined">rss_feed</span> Feeds
-        </RouterLink>
-      </li>
-      <li :class="{ active: activeRoute === '/profile' }">
-        <RouterLink to="/profile" @click="activeRoute = '/profile'">
-          <span class="material-symbols-outlined">person</span> Profile
-        </RouterLink>
-      </li>
-      <li :class="{ active: activeRoute === '/settings' }">
-        <RouterLink to="/settings" @click="activeRoute = '/settings'">
-          <span class="material-symbols-outlined">settings</span> Settings
-        </RouterLink>
-      </li>
-    </ul>
-  </nav>
+    </RouterLink>
+  </ul>
 </template>
 
 <script setup lang="ts">
@@ -50,6 +18,15 @@ onMounted(() => {
 })
 
 const activeRoute = ref('/');
+const routes = [
+  { path: '/', name: 'Home', icon: 'home' },
+  { path: '/search', name: 'Search', icon: 'search' },
+  { path: '/notifications', name: 'Notifications', icon: 'notifications' },
+  { path: '/chat', name: 'Chat', icon: 'chat' },
+  { path: '/feeds', name: 'Feeds', icon: 'rss_feed' },
+  { path: '/profile', name: 'Profile', icon: 'person' },
+  { path: '/settings', name: 'Settings', icon: 'settings' }
+];
 </script>
 
 <style scoped>
@@ -61,18 +38,46 @@ const activeRoute = ref('/');
     'opsz' 48;
   vertical-align: middle;
   margin-right: 8px;
+  font-size: 28px;
+}
+
+.nav-text {
+  font-size: 24px;
 }
 
 nav {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  padding: 0 10px;
 }
 
-nav ul {
-  list-style: none;
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  justify-content: end;
+}
+
+ul {
+  list-style-type: none;
   padding: 0;
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  width: 60%;
+  display: flex;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+li:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
 }
 
 li.active {
@@ -84,16 +89,14 @@ li.active a {
   font-weight: 700;
 }
 
-nav li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 8px;
-}
-
 nav a {
   text-decoration: none;
   color: inherit;
   display: flex;
   align-items: center;
+}
+
+.active {
+  font-weight: 900;
 }
 </style>

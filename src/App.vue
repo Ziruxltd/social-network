@@ -25,17 +25,17 @@
 
   .nav-container {
     border-right: 1px solid #ccc;
-    width: 23%;
+    width: 20%;
     height: 100vh;
   }
 
   .content-container {
-    width: 44%;
+    width: 60%;
   }
 
   .extras-container {
     border-left: 1px solid #ccc;
-    width: 23%;
+    width: 20%;
     height: 100vh;
   }
 </style>
