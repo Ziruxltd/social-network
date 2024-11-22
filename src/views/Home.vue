@@ -12,7 +12,7 @@
       <div class="posts-container">
         <div v-if="activeTab === 'discover'">
           <!-- Content for Discover tab -->
-          1
+          <PostComponent v-for="post in posts" :key="post.id" :post="post" />
         </div>
         <div v-else>
           <!-- Content for Following tab -->
@@ -24,10 +24,67 @@
 </template>
 
 <script>
+import PostComponent from '../components/PostComponent.vue';
+
 export default {
+  components: {
+    PostComponent
+  },
   data() {
     return {
-      activeTab: 'discover'
+      activeTab: 'discover',
+      posts: [
+        {
+          id: 1,
+          user: {
+            name: 'John Doe',
+            username: 'johndoe',
+            profileImage: 'https://via.placeholder.com/50'
+          },
+          content: 'This is a mock post content 1 lore ipsum y muchas cosas mas que deben estar aqui padad tener algo mas de textro auqn los demas',
+          date: '2024-11-22T10:00:00Z'
+        },
+        {
+          id: 2,
+          user: {
+            name: 'Jane Smith',
+            username: 'janesmith',
+            profileImage: 'https://via.placeholder.com/50'
+          },
+          content: 'This is a mock post content 2',
+          date: '2023-10-02T11:00:00Z'
+        },
+        {
+          id: 3,
+          user: {
+            name: 'Alice Johnson',
+            username: 'alicejohnson',
+            profileImage: 'https://via.placeholder.com/50'
+          },
+          content: 'This is a mock post content 3',
+          date: '2023-10-03T12:00:00Z'
+        },
+        {
+          id: 4,
+          user: {
+            name: 'Bob Brown',
+            username: 'bobbrown',
+            profileImage: 'https://via.placeholder.com/50'
+          },
+          content: 'This is a mock post content 4',
+          date: '2022-10-04T13:00:00Z'
+        },
+        {
+          id: 5,
+          user: {
+            name: 'Charlie Davis',
+            username: 'charliedavis',
+            profileImage: 'https://via.placeholder.com/50'
+          },
+          content: 'This is a mock post content 5',
+          date: '2024-10-05T14:00:00Z'
+        }
+      ]
     };
   }
 };
