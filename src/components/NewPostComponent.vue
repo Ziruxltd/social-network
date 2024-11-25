@@ -2,7 +2,7 @@
   <div class="new-post">
     <UserProfileImage src="https://via.placeholder.com/50" />
     <div class="post-container">
-      <textarea v-model="newPostContent" class="post-content" ref="textAreaRef" placeholder="What's on your mind?" @input="adjustTextAreaHeight"></textarea>
+      <textarea v-model="newPostContent" class="post-content" ref="textAreaRef" placeholder="What's on your mind?" @input="adjustTextAreaHeight" maxlength="480"></textarea>
       <div class="post-footer">
         <div class="footer-btns">
           <p>{{ postLengthLimit - newPostContent.length }}</p>
