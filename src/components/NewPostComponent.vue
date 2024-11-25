@@ -2,12 +2,6 @@
   <div class="new-post">
     <UserProfileImage src="https://via.placeholder.com/50" />
     <div class="post-container">
-      <div class="post-header">
-        <div class="user-info">
-          <h3>Your Name</h3>
-          <p>@yourusername</p>
-        </div>
-      </div>
       <textarea v-model="newPostContent" class="post-content" ref="textAreaRef" placeholder="What's on your mind?" @input="adjustTextAreaHeight"></textarea>
       <div class="post-footer">
         <div class="footer-btns">
@@ -52,11 +46,6 @@ function submitPost() {
   margin: 10px;
 }
 
-.post-header {
-  display: flex;
-  align-items: center;
-}
-
 .profile-image {
   width: 50px;
   height: 50px;
@@ -69,20 +58,10 @@ function submitPost() {
   gap: 5px;
 }
 
-.user-info h3 {
-  margin: 0;
-  font-size: 16px;
-}
-
-.user-info p {
-  margin: 0;
-  color: #657786;
-}
-
 .post-content {
   font: inherit;
   text-align: left;
-  margin: 20px 0 5px 0;
+  margin: 10px 0 5px 0;
   word-break: break-word;
   width: 100%;
   height: auto;
