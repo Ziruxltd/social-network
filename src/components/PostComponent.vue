@@ -1,8 +1,6 @@
 <template>
   <div class="post">
-    <div class="post-thread">
-      <img :src="post.user.profileImage" alt="User Image" class="profile-image" />
-    </div>
+    <UserProfileImage :src="post.user.profileImage" />
     <div class="post-container">
       <div class="post-header">
         <div class="user-info">
@@ -25,8 +23,13 @@
 </template>
 
 <script>
+import UserProfileImage from './UserProfileImage.vue';
+
 export default {
   name: 'PostComponent',
+  components: {
+    UserProfileImage
+  },
   props: {
     post: {
       type: Object,

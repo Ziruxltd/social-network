@@ -7,8 +7,9 @@
       </ul>
     </nav>
     <div>
-      <h1>Welcome to my social network</h1>
-      <p>This is just a sample text. If you read it you are more intelligent.</p>
+      <div class="new-post-container">
+        <NewPostComponent />
+      </div>
       <div class="posts-container">
         <div v-if="activeTab === 'discover'">
           <!-- Content for Discover tab -->
@@ -23,17 +24,13 @@
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref } from 'vue';
 import PostComponent from '../components/PostComponent.vue';
+import NewPostComponent from '../components/NewPostComponent.vue';
 
-export default {
-  components: {
-    PostComponent
-  },
-  data() {
-    return {
-      activeTab: 'discover',
-      posts: [
+const activeTab = ref('discover');
+const posts = [
         {
           id: 1,
           user: {
@@ -134,10 +131,7 @@ export default {
           content: 'This is a mock post content 10',
           date: '2024-10-10T19:00:00Z'
         }
-      ]
-    };
-  }
-};
+      ];
 </script>
 
 <style scoped>
@@ -190,5 +184,10 @@ button.active {
   width: 70%;
   height: 2px;
   background-color: #1083fe;
+}
+
+.new-post-container {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
 }
 </style>
