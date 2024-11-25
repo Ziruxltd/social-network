@@ -41,7 +41,7 @@ export default {
             username: 'johndoe',
             profileImage: 'https://via.placeholder.com/50'
           },
-          content: 'This is a mock post content 1 lore ipsum y muchas cosas mas que deben estar aqui padad tener algo mas de textro auqn los demas',
+          content: 'This is a mock post content 1 lore ipsum y muchas cosas mas que deben estar aqui padad tener algo mas de textro auqn los demas. Tambien queremos saber como es un texto mas largo del habitual, pero no sabemos que escribir asi que escribo esto.',
           date: '2024-11-22T10:00:00Z'
         },
         {
@@ -51,7 +51,7 @@ export default {
             username: 'janesmith',
             profileImage: 'https://via.placeholder.com/50'
           },
-          content: 'This is a mock post content 2',
+          content: 'This is a mock post content 2 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
           date: '2023-10-02T11:00:00Z'
         },
         {

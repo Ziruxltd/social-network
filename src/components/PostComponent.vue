@@ -122,6 +122,12 @@ export default {
 .post-content {
   text-align: left;
   margin: 10px 0;
+  word-break: break-word;
+}
+
+.footer-btns {
+  display: flex;
+  justify-content: space-between
 }
 
 .post-footer button {
@@ -129,12 +135,15 @@ export default {
   border: none;
   color: #1da1f2;
   cursor: pointer;
-  padding: 0px; /* Add this line to remove padding */
-  margin: 10px 10px; /* Add this line to remove margin */
-  font: inherit; /* Add this line to inherit font properties */
+  font: inherit;
 }
 
 .post-footer button:hover {
   text-decoration: underline;
+}
+
+button {
+  margin: 0;
+  padding:  0;
 }
 </style>
