@@ -3,7 +3,7 @@
     <div class="post-thread">
       <img :src="post.user.profileImage" alt="User Image" class="profile-image" />
     </div>
-    <div>
+    <div class="post-container">
       <div class="post-header">
         <div class="user-info">
           <h3>{{ post.user.name }}</h3>
@@ -13,9 +13,12 @@
       </div>
       <p class="post-content">{{ post.content }}</p>
       <div class="post-footer">
-        <button @click="likePost">Like</button>
-        <button @click="retweetPost">Retweet</button>
-        <button @click="replyPost">Reply</button>
+        <div class="footer-btns">
+          <button @click="commentPost">Comment</button>
+          <button @click="likePost">Like</button>
+          <button @click="retweetPost">Retweet</button>
+          <button @click="replyPost">Reply</button>
+        </div>
       </div>
     </div>
   </div>
@@ -31,6 +34,9 @@ export default {
     }
   },
   methods: {
+    commentPost() {
+      // Logic for commenting on the post
+    },
     likePost() {
       // Logic for liking the post
     },
@@ -67,15 +73,28 @@ export default {
 <style scoped>
 .post {
   border: 1px solid #e1e8ed;
-  padding: 10px;
   margin: 0px 10px 10px 10px;
   border-radius: 5px;
   display: flex;
 }
 
+.post:hover {
+  background-color: #f5f8fa;
+  cursor: pointer;
+}
+
+.post-container {
+  width: 100%;
+  margin: 10px;
+}
+
 .post-header {
   display: flex;
   align-items: center;
+}
+
+.post-thread {
+  margin: 10px 0px 10px 10px;
 }
 
 .profile-image {
@@ -110,7 +129,9 @@ export default {
   border: none;
   color: #1da1f2;
   cursor: pointer;
-  margin-right: 10px;
+  padding: 0px; /* Add this line to remove padding */
+  margin: 10px 10px; /* Add this line to remove margin */
+  font: inherit; /* Add this line to inherit font properties */
 }
 
 .post-footer button:hover {

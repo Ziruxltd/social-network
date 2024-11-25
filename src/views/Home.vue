@@ -83,6 +83,56 @@ export default {
           },
           content: 'This is a mock post content 5',
           date: '2024-10-05T14:00:00Z'
+        },
+        {
+          id: 6,
+          user: {
+            name: 'David Evans',
+            username: 'davidevans',
+            profileImage: 'https://via.placeholder.com/50'
+          },
+          content: 'This is a mock post content 6',
+          date: '2024-10-06T15:00:00Z'
+        },
+        {
+          id: 7,
+          user: {
+            name: 'Eva Green',
+            username: 'evagreen',
+            profileImage: 'https://via.placeholder.com/50'
+          },
+          content: 'This is a mock post content 7',
+          date: '2024-10-07T16:00:00Z'
+        },
+        {
+          id: 8,
+          user: {
+            name: 'Frank Harris',
+            username: 'frankharris',
+            profileImage: 'https://via.placeholder.com/50'
+          },
+          content: 'This is a mock post content 8',
+          date: '2024-10-08T17:00:00Z'
+        },
+        {
+          id: 9,
+          user: {
+            name: 'Grace Lee',
+            username: 'gracelee',
+            profileImage: 'https://via.placeholder.com/50'
+          },
+          content: 'This is a mock post content 9',
+          date: '2024-10-09T18:00:00Z'
+        },
+        {
+          id: 10,
+          user: {
+            name: 'Henry King',
+            username: 'henryking',
+            profileImage: 'https://via.placeholder.com/50'
+          },
+          content: 'This is a mock post content 10',
+          date: '2024-10-10T19:00:00Z'
         }
       ]
     };
@@ -92,8 +142,8 @@ export default {
 
 <style scoped>
 .home-container {
-  width: 100%; /* Ensure the container takes the full width */
-  height: 100%; /* Ensure the container takes the full height */
+  width: 100%;
+  height: 100%;
 }
 nav {
   border-bottom: 1px solid #ccc;

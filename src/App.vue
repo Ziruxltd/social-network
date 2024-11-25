@@ -26,16 +26,17 @@
   .nav-container {
     border-right: 1px solid #ccc;
     width: 20%;
-    height: 100vh;
+    height: auto;
   }
 
   .content-container {
     width: 60%;
+    min-height: 100vh;
   }
 
   .extras-container {
     border-left: 1px solid #ccc;
     width: 20%;
-    height: 100vh;
+    height: auto;
   }
 </style>
