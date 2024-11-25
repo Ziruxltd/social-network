@@ -12,7 +12,6 @@
       <p class="post-content">{{ post.content }}</p>
       <div class="post-footer">
         <div class="footer-btns">
-          <button @click="commentPost">Comment</button>
           <button @click="likePost">Like</button>
           <button @click="retweetPost">Retweet</button>
           <button @click="replyPost">Reply</button>
@@ -37,9 +36,6 @@ export default {
     }
   },
   methods: {
-    commentPost() {
-      // Logic for commenting on the post
-    },
     likePost() {
       // Logic for liking the post
     },
